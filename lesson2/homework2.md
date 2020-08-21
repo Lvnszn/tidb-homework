@@ -162,23 +162,23 @@
 
 sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --table_size=10000 prepare
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled.png)
+![img/Untitled.png](img/Untitled.png)
 
 - oltp_point_select
 
     sysbench oltp_point_select --config-file=ticonfig --threads=4 --tables=4 --table_size=10000 run
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%201.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%201.png)
+    ![img/Untitled01.png](img/Untitled01.png)
 
     sysbench oltp_point_select --config-file=ticonfig --threads=10 --tables=4 --table_size=10000 run
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%202.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%202.png)
+    ![img/Untitled02.png](img/Untitled02.png)
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%203.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%203.png)
+    ![img/Untitled03.png](img/Untitled03.png)
 
     TIKV Cluster QPS
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%204.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%204.png)
+    ![img/Untitled04.png](img/Untitled04.png)
 
     TIKV Grpc duration
 
@@ -194,37 +194,37 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
     ./bin/go-ycsb load mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%205.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%205.png)
+    ![img/Untitled05.png](img/Untitled05.png)
 
     ./bin/go-ycsb load mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%206.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%206.png)
+    ![img/Untitled06.png](img/Untitled06.png)
 
     > 通过go-yscb做test
 
     ./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%207.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%207.png)
+    ![img/Untitled07.png](img/Untitled07.png)
 
     ./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%208.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%208.png)
+    ![img/Untitled08.png](img/Untitled08.png)
 
 - workload-b
 
     > 通过go-ycsb来做数据加载
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%209.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%209.png)
+    ![img/Untitled09.png](img/Untitled09.png)
 
     > 通过go-yscb做test
 
     5thread, 10000record
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2010.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2010.png)
+    ![img/Untitled010.png](img/Untitled010.png)
 
     1thread 10000records
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2011.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2011.png)
+    ![img/Untitled011.png](img/Untitled011.png)
 
 - workload-c
 
@@ -232,21 +232,21 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
     load 1thread 10000records
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2012.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2012.png)
+    ![img/Untitled012.png](img/Untitled012.png)
 
     load 4thread 10000records
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2013.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2013.png)
+    ![img/Untitled013.png](img/Untitled013.png)
 
     > 通过go-yscb做test
 
     1thread 10000record 
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2014.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2014.png)
+    ![img/Untitled014.png](img/Untitled014.png)
 
     4thread 10000record 
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2015.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2015.png)
+    ![img/Untitled015.png](img/Untitled015.png)
 
 - workload-d
 
@@ -254,21 +254,21 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
     ./bin/go-ycsb load mysql -P workloads/workloadd -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2016.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2016.png)
+    ![img/Untitled016.png](img/Untitled016.png)
 
     ./bin/go-ycsb load mysql -P workloads/workloadd -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2017.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2017.png)
+    ![img/Untitled017.png](img/Untitled017.png)
 
     > 通过go-ycsb来做test
 
     ./bin/go-ycsb run mysql -P workloads/workloadd -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2018.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2018.png)
+    ![img/Untitled018.png](img/Untitled018.png)
 
     ./bin/go-ycsb run mysql -P workloads/workloadd -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2019.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2019.png)
+    ![img/Untitled019.png](img/Untitled019.png)
 
 - workload-e
 
@@ -276,21 +276,21 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
     ./bin/go-ycsb load mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2020.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2020.png)
+    ![img/Untitled020.png](img/Untitled020.png)
 
     ./bin/go-ycsb load mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2021.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2021.png)
+    ![img/Untitled021.png](img/Untitled021.png)
 
     > 通过go-ycsb来做test
 
     ./bin/go-ycsb run mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2022.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2022.png)
+    ![img/Untitled022.png](img/Untitled022.png)
 
     ./bin/go-ycsb run mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2023.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2023.png)
+    ![img/Untitled023.png](img/Untitled023.png)
 
 - workload-f
 
@@ -298,25 +298,25 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
     ./bin/go-ycsb load mysql -P workloads/workloadf -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2024.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2024.png)
+    ![img/Untitled024.png](img/Untitled024.png)
 
     ./bin/go-ycsb load mysql -P workloads/workloadf -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2025.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2025.png)
+    ![img/Untitled025.png](img/Untitled025.png)
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2026.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2026.png)
+    ![img/Untitled026.png](img/Untitled026.png)
 
     > 通过go-ycsb来做test
 
     ./bin/go-ycsb run mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 1
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2027.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2027.png)
+    ![img/Untitled027.png](img/Untitled027.png)
 
     ./bin/go-ycsb run mysql -P workloads/workloade -p recordcount=10000 -p mysql.host=127.0.0.1 -p mysql.port=4000 --threads 4
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2028.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2028.png)
+    ![img/Untitled028.png](img/Untitled028.png)
 
-    ![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2029.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2029.png)
+    ![img/Untitled029.png](img/Untitled029.png)
 
 ---
 
@@ -328,57 +328,57 @@ sysbench oltp_update_non_index --config-file=ticonfig --threads=4 --tables=4 --t
 
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 10 prepare
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2030.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2030.png)
+![img/Untitled030.png](img/Untitled030.png)
 
 ## 数据查询
 
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 2 run
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2031.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2031.png)
+![img/Untitled031.png](img/Untitled031.png)
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2032.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2032.png)
+![img/Untitled032.png](img/Untitled032.png)
 
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 1 run
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2033.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2033.png)
+![img/Untitled033.png](img/Untitled033.png)
 
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 1 run --threads 4
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2034.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2034.png)
+![img/Untitled034.png](img/Untitled034.png)
 
 ---
 
 # Grafana QPS
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2035.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2035.png)
+![img/Untitled035.png](img/Untitled035.png)
 
 ## TIDB Duration & QPS
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2036.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2036.png)
+![img/Untitled036.png](img/Untitled036.png)
 
 Duration & QPS
 
 ## TIKV-Detail Cluster QPS & CPU
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2037.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2037.png)
+![img/Untitled037.png](img/Untitled037.png)
 
 QPS
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2038.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2038.png)
+![img/Untitled038.png](img/Untitled038.png)
 
 CPU
 
 ## TIKV-Detail Server QPS & CPU
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2039.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2039.png)
+![img/Untitled039.png](img/Untitled039.png)
 
 ## TIKV-GRPC CPU & Duration
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2040.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2040.png)
+![img/Untitled040.png](img/Untitled040.png)
 
 CPU
 
-![TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2041.png](TIDB-Benchmark%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C%20048d5bb8bde14eb6a0048c9bd4355929/Untitled%2041.png)
+![img/Untitled041.png](img/Untitled041.png)
 
 Duration
 
